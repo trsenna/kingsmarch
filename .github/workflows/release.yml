@@ -59,3 +59,12 @@ jobs:
             --workspace-folder ./src/universal \
             --image-name ghcr.io/${{ github.repository_owner }}/kingsmarch/universal:latest \
             --push
+
+      # 5. Cleanup untagged versions
+      - name: Cleanup Untagged Versions
+        uses: actions/delete-package-versions@v5
+        with:
+          package-name: 'kingsmarch'
+          package-type: 'container'
+          delete-only-untagged-versions: 'true'
+          min-versions-to-keep: 0
