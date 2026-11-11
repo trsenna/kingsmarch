@@ -23,16 +23,16 @@ build: build-foundation build-baseline build-atelier build-foundation
 
 build-foundation:
 	@echo "Building $(IMAGE_FOUNDATION) image..."
-	devcontainer build --workspace-folder src/$(IMAGE_FOUNDATION) --image-name $(REGISTRY)-$(IMAGE_FOUNDATION):$(TAG)
+	devcontainer build --workspace-folder src/$(IMAGE_FOUNDATION) --image-name $(REGISTRY)/$(IMAGE_FOUNDATION):$(TAG)
 
 build-baseline:
 	@echo "Building $(IMAGE_BASELINE) image..."
-	devcontainer build --workspace-folder src/$(IMAGE_BASELINE) --image-name $(REGISTRY)-$(IMAGE_BASELINE):$(TAG)
+	devcontainer build --workspace-folder src/$(IMAGE_BASELINE) --image-name $(REGISTRY)/$(IMAGE_BASELINE):$(TAG)
 
 build-atelier:
 	@echo "Building $(IMAGE_ATELIER) image..."
-	devcontainer build --workspace-folder src/$(IMAGE_ATELIER) --image-name $(REGISTRY)-$(IMAGE_ATELIER):$(TAG)
+	devcontainer build --workspace-folder src/$(IMAGE_ATELIER) --image-name $(REGISTRY)/$(IMAGE_ATELIER):$(TAG)
 
 build-universal:
 	@echo "Building $(IMAGE_UNIVERSAL) image..."
-	devcontainer build --workspace-folder src/$(IMAGE_UNIVERSAL) --image-name $(REGISTRY)-$(IMAGE_UNIVERSAL):$(TAG)
+	devcontainer build --workspace-folder src/$(IMAGE_UNIVERSAL) --image-name $(REGISTRY)/$(IMAGE_UNIVERSAL):$(TAG)
