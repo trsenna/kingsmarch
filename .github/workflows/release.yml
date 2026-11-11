@@ -11,19 +11,6 @@ jobs:
       contents: read
       packages: write
 
-    strategy:
-      fail-fast: false
-      matrix:
-        image:
-          - name: foundation
-            dir: ./src/foundation
-          - name: baseline
-            dir: ./src/baseline
-          - name: atelier
-            dir: ./src/atelier
-          - name: universal
-            dir: ./src/universal
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -41,9 +28,34 @@ jobs:
       - name: Install Dev Containers CLI
         run: npm install -g @devcontainers/cli
 
-      - name: Build and Push DevContainer Image
+      # 1. Build the foundation
+      - name: Build & Push Foundation
         run: |
           devcontainer build \
-            --workspace-folder ${{ matrix.image.dir }} \
-            --image-name ghcr.io/${{ github.repository_owner }}/kingsmarch/${{ matrix.image.name }}:latest \
+            --workspace-folder ./src/foundation \
+            --image-name ghcr.io/${{ github.repository_owner }}/kingsmarch/foundation:latest \
+            --push
+
+      # 2. Build the baseline
+      - name: Build & Push Baseline
+        run: |
+          devcontainer build \
+            --workspace-folder ./src/baseline \
+            --image-name ghcr.io/${{ github.repository_owner }}/kingsmarch/baseline:latest \
+            --push
+
+      # 3. Build the atelier
+      - name: Build & Push Atelier
+        run: |
+          devcontainer build \
+            --workspace-folder ./src/atelier \
+            --image-name ghcr.io/${{ github.repository_owner }}/kingsmarch/atelier:latest \
+            --push
+
+      # 4. Build the universal
+      - name: Build & Push Universal
+        run: |
+          devcontainer build \
+            --workspace-folder ./src/universal \
+            --image-name ghcr.io/${{ github.repository_owner }}/kingsmarch/universal:latest \
             --push
