@@ -1,0 +1,29 @@
+{
+	"name": "Kingsmarch Foundation",
+	"build": {
+		"dockerfile": "./Dockerfile",
+		"context": "."
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installOhMyZsh": "false",
+			"installOhMyZshConfig": "false",
+			"installZsh": "false",
+			"upgradePackages": "true",
+			"username": "kingsmarch"
+		},
+		"ghcr.io/devcontainers/features/git:1": {
+			"ppa": "false",
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/github-cli:1": {
+			"version": "latest"
+		}
+	},
+	"overrideFeatureInstallOrder": [
+		"ghcr.io/devcontainers/features/common-utils",
+		"ghcr.io/devcontainers/features/git",
+		"ghcr.io/devcontainers/features/github-cli"
+	],
+	"remoteUser": "kingsmarch"
+}
