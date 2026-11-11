@@ -1,0 +1,16 @@
+{
+	"name": "Kingsmarch Atelier",
+	"image": "ghcr.io/trsenna/kingsmarch/baseline",
+	"features": {
+		"ghcr.io/tailscale/codespace/tailscale:1": {},
+		"ghcr.io/trsenna/kingsmarch-features/bootstrap:0": {},
+		"ghcr.io/trsenna/kingsmarch-features/devcontainers-cli:0": {},
+		"ghcr.io/trsenna/kingsmarch-features/starship:0": {}
+	},
+	"overrideFeatureInstallOrder": [
+		"ghcr.io/tailscale/codespace/tailscale",
+		"ghcr.io/trsenna/kingsmarch-features/bootstrap",
+		"ghcr.io/trsenna/kingsmarch-features/devcontainers-cli",
+		"ghcr.io/trsenna/kingsmarch-features/starship"
+	]
+}

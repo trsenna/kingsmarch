@@ -3,9 +3,11 @@
 REGISTRY 			:= ghcr.io/trsenna/kingsmarch
 IMAGE_FOUNDATION    := foundation
 IMAGE_BASELINE    	:= baseline
+IMAGE_ATELIER    	:= atelier
+IMAGE_UNIVERSAL    	:= universal
 
-.PHONY: build-foundation ensure-foundation \
-	build-baseline build build-all prune prune-all
+.PHONY: build-foundation build-baseline \
+	build-atelier build-universal build prune prune-all
 
 # ---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---
 #       LOREM IPSUM
@@ -16,13 +18,17 @@ build-foundation:
 	@echo "Building $(IMAGE_FOUNDATION) image..."
 	devcontainer build --workspace-folder images/$(IMAGE_FOUNDATION) --image-name $(REGISTRY)/$(IMAGE_FOUNDATION)
 
-# ensure-foundation:
-# 	@docker image inspect $(REGISTRY)/$(IMAGE_FOUNDATION) >/dev/null 2>&1 \
-# 		|| $(MAKE) --no-print-directory build-foundation
+build-baseline:
+	@echo "Building $(IMAGE_BASELINE) image..."
+	devcontainer build --workspace-folder images/$(IMAGE_BASELINE) --image-name $(REGISTRY)/$(IMAGE_BASELINE)
 
-# build-baseline: ensure-foundation
-# 	@echo "Building $(IMAGE_BASELINE) image..."
-# 	devcontainer build --workspace-folder images/$(IMAGE_BASELINE) --image-name $(REGISTRY)/$(IMAGE_BASELINE)
+build-atelier:
+	@echo "Building $(IMAGE_ATELIER) image..."
+	devcontainer build --workspace-folder images/$(IMAGE_ATELIER) --image-name $(REGISTRY)/$(IMAGE_ATELIER)
+
+build-universal:
+	@echo "Building $(IMAGE_UNIVERSAL) image..."
+	devcontainer build --workspace-folder images/$(IMAGE_UNIVERSAL) --image-name $(REGISTRY)/$(IMAGE_UNIVERSAL)
 
 # ---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---
 #       LOREM IPSUM
@@ -31,7 +37,9 @@ build-foundation:
 
 build:
 	build-foundation
-# build-all: build-foundation build-baseline
+	build-baseline
+	build-atelier
+	build-universal
 
 # ---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---
 #       LOREM IPSUM

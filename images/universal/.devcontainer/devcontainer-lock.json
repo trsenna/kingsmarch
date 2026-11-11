@@ -1,0 +1,44 @@
+{
+  "features": {
+    "ghcr.io/devcontainers/features/go:1": {
+      "version": "1.4.1",
+      "resolved": "ghcr.io/devcontainers/features/go@sha256:2f2ed290df9a5f1841340b14cb8a287cf0574a816967dd84dcfe42fdd97b897e",
+      "integrity": "sha256:2f2ed290df9a5f1841340b14cb8a287cf0574a816967dd84dcfe42fdd97b897e"
+    },
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "1.8.3",
+      "resolved": "ghcr.io/devcontainers/features/java@sha256:61a839211feda1e2a1f10646648a948e733e4d98d770f3a4b6698a3c5fc92abe",
+      "integrity": "sha256:61a839211feda1e2a1f10646648a948e733e4d98d770f3a4b6698a3c5fc92abe"
+    },
+    "ghcr.io/devcontainers/features/php:1": {
+      "version": "1.1.6",
+      "resolved": "ghcr.io/devcontainers/features/php@sha256:d2367aa5d0c6c39e824e81c1d53696fc3c6370aca5d954105d3675d0a176137f",
+      "integrity": "sha256:d2367aa5d0c6c39e824e81c1d53696fc3c6370aca5d954105d3675d0a176137f"
+    },
+    "ghcr.io/devcontainers/features/ruby:2": {
+      "version": "2.0.0",
+      "resolved": "ghcr.io/devcontainers/features/ruby@sha256:31b07475acf72a649c2f323d2ab5c15e1a0c286e7495be822b0850e240a9b5b7",
+      "integrity": "sha256:31b07475acf72a649c2f323d2ab5c15e1a0c286e7495be822b0850e240a9b5b7"
+    },
+    "ghcr.io/tailscale/codespace/tailscale:1": {
+      "version": "1.0.8",
+      "resolved": "ghcr.io/tailscale/codespace/tailscale@sha256:fa5ce7ca298e7ab95842fef99e107a01b090b8ca8a687789220f3f3c887ccdb2",
+      "integrity": "sha256:fa5ce7ca298e7ab95842fef99e107a01b090b8ca8a687789220f3f3c887ccdb2"
+    },
+    "ghcr.io/trsenna/kingsmarch-features/bootstrap:0": {
+      "version": "0.1.0",
+      "resolved": "ghcr.io/trsenna/kingsmarch-features/bootstrap@sha256:0ce512081eb199d7741fc18d9136c4f61e005438eed52e2b8e0ec71302aa16a0",
+      "integrity": "sha256:0ce512081eb199d7741fc18d9136c4f61e005438eed52e2b8e0ec71302aa16a0"
+    },
+    "ghcr.io/trsenna/kingsmarch-features/devcontainers-cli:0": {
+      "version": "0.1.0",
+      "resolved": "ghcr.io/trsenna/kingsmarch-features/devcontainers-cli@sha256:d1da6282e824fe35a8d9faafc20ac717e108ceb2c22ecec02fccec6d34005571",
+      "integrity": "sha256:d1da6282e824fe35a8d9faafc20ac717e108ceb2c22ecec02fccec6d34005571"
+    },
+    "ghcr.io/trsenna/kingsmarch-features/starship:0": {
+      "version": "0.1.0",
+      "resolved": "ghcr.io/trsenna/kingsmarch-features/starship@sha256:3b66dbc2d9d092a7533e5dc3e7ddfd49baf243c7b51e3917fd55a52d09e17f77",
+      "integrity": "sha256:3b66dbc2d9d092a7533e5dc3e7ddfd49baf243c7b51e3917fd55a52d09e17f77"
+    }
+  }
+}
