@@ -1,6 +1,6 @@
 {
 	"name": "Kingsmarch Atelier",
-	"image": "ghcr.io/trsenna/kingsmarch/baseline",
+	"image": "ghcr.io/trsenna/kingsmarch-baseline",
 	"features": {
 		"ghcr.io/tailscale/codespace/tailscale:1": {},
 		"ghcr.io/trsenna/kingsmarch-features/bootstrap:0": {},

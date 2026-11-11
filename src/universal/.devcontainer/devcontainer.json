@@ -1,6 +1,6 @@
 {
 	"name": "Kingsmarch Universal",
-	"image": "ghcr.io/trsenna/kingsmarch/baseline",
+	"image": "ghcr.io/trsenna/kingsmarch-baseline",
 	"features": {
 		"ghcr.io/devcontainers/features/php:1": {
 			"installComposer": true,

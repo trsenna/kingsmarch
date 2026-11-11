@@ -1,6 +1,6 @@
 {
 	"name": "Kingsmarch Baseline",
-	"image": "ghcr.io/trsenna/kingsmarch/foundation",
+	"image": "ghcr.io/trsenna/kingsmarch-foundation",
 	"features": {
 		"ghcr.io/devcontainers/features/node:2": {
 			"version": "24"
